@@ -1,0 +1,63 @@
+.SearchBar {
+  background-image: url("/searchbar-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.SearchBar::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .25);
+  z-index: -1;
+}
+
+.SearchBarContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 400px;
+}
+
+.SearchBarSortByBtns {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  /* border-bottom: solid 2px white; */
+  /* padding-bottom: 10px; */
+}
+
+.SearchBarSortByBtns button {
+  background: none;
+  border: solid 2px white;
+  font-size: .75rem;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  flex: 1;
+}
+
+.SearchBarInputs {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.SearchBarInput {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}

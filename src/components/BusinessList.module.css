@@ -1,0 +1,12 @@
+.BusinessList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6rem;
+  margin: 5rem;
+  /* justify-content: center; */
+}
+
+.BusinessListContainer {
+  max-width: 1440px;
+  margin: auto;
+}

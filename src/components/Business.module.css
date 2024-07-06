@@ -1,0 +1,30 @@
+.BusinessCard img{
+  width: 100%;
+  border-radius: 5px;
+  aspect-ratio: 1/1;
+  box-shadow: 0 5px 10px -7px grey;
+}
+
+.BusinessCard {
+  /* min-width: 300px; */
+}
+
+.BusinessCard p {
+  max-width: 300px;
+  margin-block: .5rem;
+}
+
+.BusinessInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.BusinessReviews {
+  color: rgb(189, 162, 11);
+  text-align: right;
+}
+
+.BusinessCategory {
+  text-transform: uppercase;
+  font-weight: 800;
+}
