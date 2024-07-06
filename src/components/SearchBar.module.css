@@ -68,3 +68,13 @@
   background: white;
   color: black;
 }
+
+.SearchBarSubmitBtn {
+  background-color: goldenrod;
+  color: brown;
+  border: none;
+  padding: 10px;
+  font-weight: 900;
+  border-radius: 5px;
+  cursor: pointer;
+}
