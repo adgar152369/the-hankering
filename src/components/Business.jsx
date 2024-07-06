@@ -1,21 +1,20 @@
-import { sampleBusiness } from "../sampeBusinessData";
 import styles from "./Business.module.css";
 
-function Business() {
+function Business(props) {
   return (
     <div className={styles.BusinessCard}>
-      <img src={sampleBusiness.imageSrc} alt="image of business" />
-      <h2>{sampleBusiness.name}</h2>
+      <img src={props.imageSrc} alt="image of business" />
+      <h2>{props.name}</h2>
       <div className={styles.BusinessInfo}>
         <div className={styles.BusinessAddress}>
-          <p>{sampleBusiness.address}</p>
-          <p>{sampleBusiness.city}</p>
-          <p>{sampleBusiness.state} {sampleBusiness.zipCode}</p>
+          <p>{props.address}</p>
+          <p>{props.city}</p>
+          <p>{props.state} {props.zipCode}</p>
         </div>
         <div className={styles.BusinessReviews}>
-          <p className={styles.BusinessCategory}>{sampleBusiness.category}</p>
-          <p>{sampleBusiness.rating} stars</p>
-          <p>{sampleBusiness.reviewCount} reviews</p>
+          <p className={styles.BusinessCategory}>{props.category}</p>
+          <p>{props.rating} stars</p>
+          <p>{props.reviewCount} reviews</p>
         </div>
       </div>
     </div>

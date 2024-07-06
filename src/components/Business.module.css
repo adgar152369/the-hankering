@@ -7,10 +7,10 @@
 
 .BusinessCard {
   /* min-width: 300px; */
+  /* max-width: 500px; */
 }
 
 .BusinessCard p {
-  max-width: 300px;
   margin-block: .5rem;
 }
 
