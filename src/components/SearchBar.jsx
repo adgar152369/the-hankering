@@ -1,37 +1,30 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.css";
+import { searchYelpAPI } from "../utils/yelpApi";
 
-export default function SearchBar() {
+export default function SearchBar(props) {
   const [sortBy, setSortBy] = useState('best_match');
   const [searchTerm, setSearchTerm] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
-  const [search, setSearch] = useState({});
 
-
-  function handleSortBy({ target }) {
-    setSortBy(target.value);
-  }
-
-  function handleSearchTerm({ target }) {
-    setSearchTerm(target.value);
-  }
-
-  function handleSearchLocation({ target }) {
-    setSearchLocation(target.value);
-  }
-
-  function handleSearch(e) {
-    e.preventDefault();
-
-    setSearch((prevSearch) => {
-      return {
-        ...prevSearch,
-        location: searchLocation,
-        term: searchTerm,
-        sort_by: sortBy
-      }
+  const handleSortBy = ({ target }) => {
+    setSortBy(() => {
+      const newSortBy = target.value;
+      props.onSearch({ sort_by: newSortBy, term: searchTerm, location: searchLocation });
+      return newSortBy;
     });
-  }
+    props.onSearch({ sort_by: sortBy, term: searchTerm, location: searchLocation });
+  };
+
+  const handleSearchTerm = ({ target }) => {
+    setSearchTerm(target.value);
+  };
+
+  const handleSearchLocation = ({ target }) => {
+    setSearchLocation(target.value);
+  };
+
+  const handleSearch = () => props.onSearch({ sort_by: sortBy, term: searchTerm, location: searchLocation });
 
   return (
     <div className={styles.SearchBar}>

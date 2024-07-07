@@ -1,4 +1,4 @@
-.BusinessCard img{
+.BusinessCard img {
   width: 100%;
   border-radius: 5px;
   aspect-ratio: 1/1;
@@ -6,17 +6,24 @@
 }
 
 .BusinessCard {
-  /* min-width: 300px; */
-  /* max-width: 500px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .BusinessCard p {
   margin-block: .5rem;
+  font-size: 0.75rem;
 }
 
 .BusinessInfo {
   display: flex;
   justify-content: space-between;
+}
+
+.BusinessAddress,
+.BusinessReviews {
+  align-self: end;
 }
 
 .BusinessReviews {
