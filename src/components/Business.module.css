@@ -3,6 +3,7 @@
   border-radius: 5px;
   aspect-ratio: 1/1;
   box-shadow: 0 5px 10px -7px grey;
+  display: block;
 }
 
 .BusinessCard {
@@ -34,4 +35,13 @@
 .BusinessCategory {
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.BusinessCardHasLink {
+  transition: all .2s;
+}
+
+.BusinessCardHasLink:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px -10px grey;
 }

@@ -58,7 +58,13 @@ export default function SearchBar(props) {
             placeholder="Where?" />
         </div>
 
-        <button className={styles.SearchBarSubmitBtn} type="submit" onClick={handleSearch}>Find Food</button>
+        <button
+          className={styles.SearchBarSubmitBtn}
+          type="submit"
+          onClick={handleSearch}
+        >
+          {searchTerm ? `Look for ${searchTerm} in ${searchLocation}` : 'Search For Stuff'}
+        </button>
       </div>
     </div>
   )
