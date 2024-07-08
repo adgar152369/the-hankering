@@ -65,6 +65,11 @@
   color: white;
 }
 
+.SearchBarInput::placeholder {
+  font-size: 1rem;
+  color: rgb(232, 232, 232);
+}
+
 .SearchBarInput:focus {
   outline: none;
 }

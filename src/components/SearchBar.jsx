@@ -1,6 +1,5 @@
 import { useState } from "react";
 import styles from "./SearchBar.module.css";
-import { searchYelpAPI } from "../utils/yelpApi";
 
 export default function SearchBar(props) {
   const [sortBy, setSortBy] = useState('best_match');
@@ -63,7 +62,7 @@ export default function SearchBar(props) {
           type="submit"
           onClick={handleSearch}
         >
-          {searchTerm ? `Look for ${searchTerm} in ${searchLocation}` : 'Search For Stuff'}
+          {searchTerm ? `Look for ${searchTerm} in ${searchLocation}` : 'Search'}
         </button>
       </div>
     </div>

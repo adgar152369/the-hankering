@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import BusinessList from './components/BusinessList';
 import SearchBar from './components/SearchBar';
-import './App.css';
-import { sampleBusinesses } from './sampleBusinessData';
 import { searchYelpAPI } from './utils/yelpApi';
+import './App.css';
 
 function App() {
   const [searchTerms, setSearchTerms] = useState({
@@ -34,7 +33,7 @@ function App() {
       <SearchBar onSearch={handleSearchTerms} />
       {Object.keys(businesses).length > 0 ?
         <BusinessList businesses={businesses} /> :
-        <p>Search for local businesses!</p>}
+        null}
     </>
   )
 }
