@@ -7,6 +7,7 @@
 2. `cd server`, then `npm install`
 3. `node server.js` to start local server
 4. `cd ..`, then `npm run dev` to start local Vite server
+5. Sign up for a free Yelp Developer account to create an API key for the .env files
 
 ### Features Coming Soon:
 - [ ] Pagination
