@@ -2,7 +2,6 @@ import Business from "./Business";
 import styles from "./BusinessList.module.css";
 
 function BusinessList(props) {
-  console.log(props.businesses);
   return (
     <div className={styles.BusinessListContainer}>
       <div className={styles.BusinessList}>
