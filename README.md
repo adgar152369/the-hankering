@@ -12,4 +12,5 @@
 ### Features Coming Soon:
 - [ ] Pagination
 - [ ] Loading search indicator
+- [ ] Error Handling
 - More CSS updates...
